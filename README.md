@@ -16,4 +16,4 @@
 ![Pulse Wave Response](./Ring_Resonator_unitil1000_Pulse.gif)
 
 **2.CW Response**
-![CW Response](/.Ring_Resonator_unitil1000_CW.gif)
+![CW Response](/.Ring_Resonator_until1000_CW.gif)
