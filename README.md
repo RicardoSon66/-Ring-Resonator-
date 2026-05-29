@@ -13,5 +13,3 @@
 
 # **Simulation Result**
 [Pulse Wave Response](./Ring_Resonator_until1000_Pulse.gif)
-
-[CW Response](./Ring_Resonator_until1000_CW.gif)
