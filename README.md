@@ -1,9 +1,6 @@
 # **Optical-Ring-Resonators-Simulation**
 **Meep** 와 **Gdsfactory** 파이썬 모듈을 이용하여 링 공진기 구현 및 시뮬레이션 
 
-# **Ring Resonators Analysis**
-이번 프로젝트는 링 공진기를 구현 및 시연 그리고 입력에 따른 변화를 분석하는 프로젝트 입니다.
-
 # **Key Features**
 **Silicon Photonics Layout Design**:Gdsfactory를 활용하여 0.5μm 폭의 Single Ring Resonators 설계 및 표준 PDK 기반 레이아웃 생성
 
