@@ -15,8 +15,7 @@
 
 ### **1.Pulse Wave**
 먼저 Pulse일때 상태를 보겠습니다.
-### **1.Pulse Wave Response**
-![](./Ring_Resonator_unitil1000_Pulse.gif)
+![Pulse Wave Response](./Ring_Resonator_unitil1000_Pulse.gif)
 
 직선 도파로에 Pulse Wave의 입력이 가해졌을때 링 도파로와 만나는 지점에 커플링 현상이 잘 일어나는것을 관측할 수 있었습니다.
 또한 Pulse Wave가 지나가고 링 내부의 빛이 한바퀴를 돌아 커플링이 되는 지점을 보았을때
@@ -27,7 +26,6 @@
 
 ### **2.CW**
 다음은 CW일때를 보겠습니다.
-### **2.CW Response**
 ![CW Response](./Ring_Resonator_until1000_CW.gif)
 관측을 하였을때 Pulse와 다른점이 있다면 직선 도파로에 Wave를 계속 쏘고 있음에도 불구하고
 링 내부의 빛이 거의 소멸되는 것처럼 보일 때가 있고 빛이 아주 강해지고 굉장히 희미해지는 지점 이 3가지를 관측을 할 수 있었습니다.
