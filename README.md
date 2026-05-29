@@ -12,4 +12,5 @@
 **Pulse and CW(Continuous Wave) Analysis**: Wave 가 Pulse일때 Ring Resonators의 응답과 CW일때 응답을 관찰하여 비교
 
 # **Simulation Result**
-![PulseWaveResponse](./Ring_Resonator_unitil1000_Pulse.gif)
+![Pulse Wave Response](./Ring_Resonator_unitil1000_Pulse.gif)
+![CW Response](/.Ring_Resonator_unitil1000_CW.gif)
