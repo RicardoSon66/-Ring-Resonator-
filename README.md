@@ -42,3 +42,10 @@
 이때는 에너지의 평형에 의해 나타나게 되는데 링으로 들어가는 에너지와 링 내부에서 손실이 이루어진 에너지의 양이 일치할때 이를 **임계 결합**(Critical Coupling)라고 합니다.  
 이 상태에서는 직선 도파로의 출력단으로 나가는 빛이 거의 0에 수렴을 하게 됩니다.
 
+# **Requirements**
+- `Meep`
+- `gdsfactory`
+- `gplugins`
+- `Python 3.12.3`
+
+# 해당 코드는 WSL을 설치하여 Ubuntu Terminal로 모듈을 설치를 하여 VSCode로 작성
