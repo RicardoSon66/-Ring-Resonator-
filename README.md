@@ -10,7 +10,7 @@
 
 # **Analysis & Engineering Opinion**
 이번 프로젝트는 단순 구현만 하는것이 아닌 다른 두가지의 입력에 대해서 실험 결과를 비교하는 프로젝트 입니다.
-채택한 두가지 입력은 Pulse와 CW(Continuous Wave)이며 두 실험 모두 1000단위 시간을 기준으로 측정하였습니다.
+###채택한 두가지 입력은 Pulse와 CW(Continuous Wave)이며 두 실험 모두 1000단위 시간을 기준으로 측정하였습니다.
 *단위시간 = 빛이 1μm를 이동하는 시간
 
 ### **1.Pulse Wave**
