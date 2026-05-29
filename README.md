@@ -48,4 +48,4 @@
 - `gplugins`
 - `Python 3.12.3`
 
-# 해당 코드는 WSL을 설치하여 Ubuntu Terminal로 모듈을 설치를 하여 VSCode로 작성
+해당 코드는 WSL을 설치하여 Ubuntu Terminal로 모듈을 설치를 하여 VSCode로 작성
