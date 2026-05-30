@@ -6,7 +6,7 @@
 
 **FDTD Simulation Setup**:Meep 엔진을 연동하여 FDTD 시뮬레이션을 진행 또한 표준 PDK를 이용하여 시뮬레이션 신뢰도 향상
 
-**Pulse and CW(Continuous Wave) Analysis**: Wave 가 Pulse일때 Ring Resonators의 응답과 CW일때 응답을 관찰하여 비교
+**Pulse and Continuous Wave(CW) Analysis**: Wave 가 Pulse일때 Ring Resonators의 응답과 CW일때 응답을 관찰하여 비교
 <br>
 
 # **Analysis & Engineering Opinion**
@@ -26,8 +26,8 @@
 이는 Resonators의 성능을 시각적으로 검증이 가능하다는것을 해당 시뮬레이션으로 통해 확인 하였습니다.  
 <br>
 
-### **2.CW**
-다음은 CW일때를 보겠습니다.
+### **2.Continuous Wave(CW)**
+다음은 CW 일때를 보겠습니다.
 ![CW Response](./Ring_Resonator_until1000_CW.gif)
 관측을 하였을때 Pulse와 다른점이 있다면 직선 도파로에 Wave를 계속 쏘고 있음에도 불구하고  
 링 내부의 빛이 거의 소멸되는 것처럼 보일 때가 있고 빛이 아주 강해지고 굉장히 희미해지는 지점 이 3가지를 관측을 할 수 있었습니다.  
@@ -45,7 +45,7 @@
 이 상태에서는 직선 도파로의 출력단으로 나가는 빛이 거의 0에 수렴을 하게 됩니다.
 <br>
 
-# **Pulse vs. CW: Comparative Summary**
+# **Pulse vs. Continuous Wave(CW): Comparative Summary**
 
 동일한 링 공진기 에서 입력 특성에 따른 출력을 비교 분석한 결과입니다.
 
