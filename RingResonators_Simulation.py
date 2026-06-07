@@ -9,7 +9,6 @@ if not hasattr(np, "asfarray"):
 
     np.asfarray = lambda x, **kwargs: np.array(x, dtype=np.float64, **kwargs)
 
-
 import meep as mp
 import gdsfactory as gf
 import gplugins.gmeep as gm
@@ -32,7 +31,7 @@ sim_results = gm.get_simulation(
 #1μm 당 격자를 20개로 조정 및 3d 비활성화 코드
 
 center_f = 1 / 1.55 # 1.55μm 파장에 해당하는 주파수 (f = c/λ)
-center_vaule = mp.Vector3(-12, 0, 0) # 광원이 위치할 버스 도파로 입구 좌표
+center_value = mp.Vector3(-12, 0, 0) # 광원이 위치할 버스 도파로 입구 좌표
 #두개 다 source 가 CW로 설정하는 코드일때 필요한 값
 
 sim = sim_results['sim']
@@ -41,7 +40,7 @@ sim = sim_results['sim']
 sim.sources = [
     mp.EigenModeSource(
         src = mp.ContinuousSource(frequency=center_f),
-        center = center_vaule,
+        center = center_value,
         size = mp.Vector3(0, 2, 0), # 빛의 크기를 도파로 단면 만큼 키움
         direction=mp.X, # x축 방향으로 빛을 발사
         eig_band=1 # 기본 모드만 사용
