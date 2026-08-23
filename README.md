@@ -46,7 +46,7 @@ $$\text{Ratio} = \frac{P_{\text{ring}}}{P_{\text{ref}}}$$
 ![Ring_Resonator_Resolution20](./Resolution20.png)  
   
 Resolution이 20일때 Transmission Spectrum 입니다. 이를 관찰 하였을 때 ring resonance가 보인다고 해석하기는 힘듭니다 예측한 값과 비교하면 안맞는 부분이 있습니다.  
-앞서 예측한 FSR는 약 18nm 이였고 그러면 1430 \~ 1680nm 에서는 dip이 약 14개 정도 규칙적으로 나와야 하는데 이상합니다.  
+앞서 예측한 FSR는 약 18nm 이였고 그러면 1430 \~ 1680nm 에서는 dip이 약 13 \~ 14개 정도 규칙적으로 나와야 하는데 이상합니다.  
 이를 좀 더 자세한 결과로 보기 위해 Resolution를 40으로 올려서 시뮬레이션을 해보았습니다. 결과는 다음과 같습니다.  
   
 ![Ring_Resonator_Resolution20](./Resolution40.png)  
