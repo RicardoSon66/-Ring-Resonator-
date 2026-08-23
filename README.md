@@ -13,7 +13,7 @@ $$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{r
 먼저 Layout을 보면 다음과 같습니다.  
 ![Ring Resonator Layout](./layout.png)
 이제 Reference 정규화를 적용한 후 추출한 $S_{21}$ 스펙트럼의 그래프는 다음과 같습니다.  
-![Ring_Resonator_grid_-15,1]
+![Ring_Resonator_grid_-15,1](./(-15, 1).png)
 거의 0에 수렴하는 결과가 나왔습니다. 왜 일까요? 이를 그래프가 아닌 수치적으로 확인하기 위해 $$\text{Ratio} = \frac{P_{\text{ring}}}{P_{\text{ref}}}$$ 식을 대입 후 ratio의 범위와 dB의 범위를 한번 수치로 확인해보면 다음과 같습니다.  
 **ratio 범위: 0.9768280116306808 ~ 0.9956251777893413**  
 **dB 범위: -0.10181895006862107 ~ -0.019041293025793507**  
