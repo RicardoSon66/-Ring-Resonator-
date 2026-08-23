@@ -7,8 +7,7 @@ waveguide의 물질은 Si 실리콘이며 Cladding 영역은 SiO2 즉 silicon-di
 # **2.시뮬레이션 세팅 및 정규화**
 시뮬레이션을 하기 위해 Source는 Gaussian Source 이며 λ = 1.55μm, Fwidth = 0.1이고 EigenModeSource를 사용하였습니다. Resolution는 20으로 초기에 설정하였고 오차를 줄이기 위해 40으로 늘려 더욱 정밀화를 하였습니다.  
 정규화를 진행하기 위해 링 구조가 없는 단일 Straight waveguide를 먼저 실험 하여 Reference Flux 데이터를 수집하고 저장 후  
-$$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{ref}}}\right)$$  
-라는 공식을 통해 **0dB** 기준선 보정을 완료 하였습니다.  
+$$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{ref}}}\right)$$ 라는 공식을 통해 **0dB** 기준선 보정을 완료 하였습니다.  
 
 
 
