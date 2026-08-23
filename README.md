@@ -13,15 +13,15 @@ $$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{r
 먼저 Layout을 보면 다음과 같습니다.  
 ![Ring Resonator Layout](./layout.png)
 이제 Reference 정규화를 적용한 후 추출한 $S_{21}$ 스펙트럼의 그래프는 다음과 같습니다.  
-![Ring_Resonator_grid_-15,1](./(-15, 1).png)
+![Ring_Resonator_grid_-15,1](./grid15.png)
 거의 0에 수렴하는 결과가 나왔습니다. 왜 일까요? 이를 그래프가 아닌 수치적으로 확인하기 위해 $$\text{Ratio} = \frac{P_{\text{ring}}}{P_{\text{ref}}}$$ 식을 대입 후 ratio의 범위와 dB의 범위를 한번 수치로 확인해보면 다음과 같습니다.  
 **ratio 범위: 0.9768280116306808 ~ 0.9956251777893413**  
 **dB 범위: -0.10181895006862107 ~ -0.019041293025793507**  
 수치로 보니 확실한 문제가 있습니다. 이때 설정한 그래프의 눈금은 (-15, 1)이였습니다 즉 눈금이 결과에 비해 굉장히 크기 때문에 flat해 보인 겁니다. 이를 (-0.15, 0.02)로 수정 후 측정한 그래프는 다음과 같습니다.  
-(Resolution 20일때 그래프)  
+![Ring_Resonator_Resolution20](./Resolution20.png) 
 Resolution이 20일때 그래프 인데 ring resonance가 보인다고 해석하기는 좀 힘듭니다 예측한 값과 비교하면 안맞는 부분이 있습니다. 앞서 예측한 FSR는 약 18nm 이였고 그러면 1430 \~ 1680nm 에서는 dip이 약 14개 정도 규칙적으로 나와야 하는데 이상합니다.  
 이를 좀 더 자세한 결과로 보기 위해 Resolution를 40으로 올려서 시뮬레이션을 해보았습니다. 결과는 다음과 같습니다.  
-(Resolution 40일때)  
+![Ring_Resonator_Resolution20](./Resolution40.png) 
 Reference Flux를 측정할때 Resolution를 20으로 잡았기 때문에 40으로 변경 후 Reference Flux 데이터를 재저장하고 본 시뮬레이션도 Resolution를 40으로 하였음에도 불구하고 거의 비슷한 magnitude가 나왔습니다.  
 이를 해석해보자면 이 작은 ratio가(0.03 ~ 0.06dB)가 진짜 물리적으로 굉장히 약한 결합을 의미하고 설계상 납득이 가능한 결과입니다.  
 왜냐? 지금 설계를 보면 결합구간 즉 coupling 구간이 굉장히 좁습니다. 그렇기 때문에 일단 굉장히 약한 결합이 이루어 진다는 확인이 가능하였습니다.  
