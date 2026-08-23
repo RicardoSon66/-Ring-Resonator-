@@ -13,6 +13,21 @@ $$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{r
 먼저 Layout을 보면 다음과 같습니다.  
   
 ![Ring Resonator Layout](./layout.png)  
+
+시뮬레이션 분석에 앞서, 먼저 설계한 Ring Resonator의 이론적 FSR를 먼저 도출합니다. FSR은 공진 스펙트럼에서 인접한 두 Dip 간의 파장 간격을 의미하며, 계산식은 다음과 같습니다.  
+  
+$$\text{FSR} = \frac{\lambda^2}{n_g \cdot L} = \frac{\lambda^2}{n_g \cdot (2\pi R)}$$  
+  
+여기서 매개변수들의 조건은 다음과 같습니다.  
+  
+**파장 ($\lambda$):** $1.55\mu\text{m}$ ($1550\,\text{nm}$)  
+**반지름 ($R$):** $5.0\mu\text{m}$ $\rightarrow$ 둘레 $L = 2\pi R \approx 31.42\mu\text{m}$  
+**실리콘 도파로 그룹 인덱스 ($n_g$):** $\approx 4.2$ (Substrate $\text{SiO}_2$, Core $\text{Si}$ 기준)  
+위 수치를 공식에 대입하면 다음과 같이 이론적 FSR을 예측할 수 있습니다.  
+  
+$$\text{FSR} = \frac{(1.55\\mu\text{m})^2}{4.2 \times (2\pi \times 5.0\mu\text{m})} \approx 0.0182\mu\text{m} = \mathbf{18.2\text{nm}}$$  
+  
+이론적으로 도출된 $\text{FSR} \approx 18.2\text{nm}$ 에 의하면, 측정 범위인 $1430 \sim 1680\\text{nm}$ ($250\text{nm}$ 대역폭) 에서는 약 **13~14개의 주기적인 Resonance Dip**이 관찰되어야 합니다.  
   
 이제 Reference 정규화를 적용한 후 추출한 $S_{21}$ 의 Transmission Spectrum 는 다음과 같습니다.  
   
