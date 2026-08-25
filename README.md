@@ -70,5 +70,7 @@ $$T = \frac{a^2 - 2ra\cos\theta + r^2}{1 - 2ra\cos\theta + (ra)^2}$$
 공진 파장이 1560.43nm 인데 원래 목표는 1550nm로 오차가 약 10nm(0.6%)정도 수준인데 이거는 시뮬레이션 환경이 3d가 아닌 2d이므로 합리적인 범위입니다.
 
 # **4.Coupling 효율을 높이기 위한 선택:RaceTrack Ring Resonator**
+이전 완전한 원형 Ring Resonator의 문제점은 Coupling 구간이 짧아 Ring과 bus간의 에너지 전달이 약하고 Q factor만 높아지는 결과를 보았습니다. 이를 개선하기 위해 Ring의 모양을 조절해 Coupling 구간을 늘려서 만든게 RaceTrack Ring Resonator입니다.
+Layout를 보면 다음과 같습니다.
 
 
