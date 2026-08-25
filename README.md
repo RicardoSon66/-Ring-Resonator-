@@ -7,7 +7,10 @@ waveguide의 물질은 Si 실리콘이며 Cladding 영역은 SiO2 즉 silicon-di
 # **2.시뮬레이션 세팅 및 정규화**
 시뮬레이션하기 위해 Source는 Gaussian Source 이며 λ = 1.55μm, Fwidth = 0.1이고 EigenModeSource를 사용하였습니다. Resolution는 20으로 초기에 설정하였고 오차를 줄이기 위해 40으로 늘려 더욱 정밀화를 하였습니다.  
 정규화를 진행하기 위해 링 구조가 없는 단일 Straight waveguide를 먼저 실험 하여 Reference Flux 데이터를 수집하고 저장 후  
-$$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{ref}}}\right)$$ 라는 공식을 통해 $0\text{dB}$ 기준선 보정을 완료 하였습니다.  
+  
+$$S_{21}(\text{dB}) = 10 \times \log_{10}\left(\frac{P_{\text{ring}}}{P_{\text{ref}}}\right)$$ 
+  
+라는 공식을 통해 $0\text{dB}$ 기준선 보정을 완료 하였습니다.  
 
 # **3.스펙트럼 분석 및 문제점 발견**
 먼저 Layout을 보면 다음과 같습니다.  
@@ -20,7 +23,7 @@ $$\text{FSR} = \frac{\lambda^2}{n_g \cdot L} = \frac{\lambda^2}{n_g \cdot (2\pi 
   
 여기서 매개변수들의 조건은 다음과 같습니다.  
   
-**파장 ($\lambda$):** $1.55\mu\text{m}$ ($1550\,\text{nm}$)  
+**파장 ($\lambda$):** $1.55\mu\text{m}$ ($1550\text{nm}$)  
 **반지름 ($R$):** $5.0\mu\text{m}$ $\rightarrow$ 둘레 $L = 2\pi R \approx 31.42\mu\text{m}$  
 **실리콘 도파로 그룹 인덱스 ($n_g$):** $\approx 4.2$ (Substrate $\text{SiO}_2$, Core $\text{Si}$ 기준)  
 위 수치를 공식에 대입하면 다음과 같이 이론적 FSR을 예측할 수 있습니다.  
@@ -63,14 +66,33 @@ $$T = \frac{a^2 - 2ra\cos\theta + r^2}{1 - 2ra\cos\theta + (ra)^2}$$
 즉 이는 "완전한 원형 Ring Resonator는 공진할 수 가 없다."가 아니라 gap = 0.2μm, radius = 5.0μm의 조건에는 결합의 길이가 짧아서 그 결과 through에서 관측되는 extinction ratio가 매우 얕다가 맞는 결론입니다. bus에서 봤을 때 "티가 안 난다"라는 상태인 거죠
 이때까지는 계속 bus를 통한 간접적인 관측으로만 보았는데 공진이 실제로 존재하는지 직접 보기 위해 링 내부를 관찰을 해보고 수치로 확인하였습니다.  
   
---- Harminv 결과 ---  
+**--- Harminv 결과 ---**
 **freq=0.6408500985034019, Q=3112.8128854260626, wavelength=1560.43nm**  
 보면 Q = 3112.8이라는 값이 나왔습니다. 이는 "through에서 보는 extinction ratio 가 굉장히 얕다"라는 결과와 정확히 이어집니다.  
 즉 결합이 약함 -> Ring으로 전달되는 에너지가 적음 -> 반대로 Ring으로 전달된 에너지가 bus로 전달이 힘들다 -> 링 안에 에너지가 오랫동안 머무름 -> 에너지가 장기적으로 잔류 ->Q factor가 높아짐  
 공진 파장이 1560.43nm 인데 원래 목표는 1550nm로 오차가 약 10nm(0.6%)정도 수준인데 이거는 시뮬레이션 환경이 3d가 아닌 2d이므로 합리적인 범위입니다.
 
 # **4.Coupling 효율을 높이기 위한 선택:RaceTrack Ring Resonator**
-이전 완전한 원형 Ring Resonator의 문제점은 Coupling 구간이 짧아 Ring과 bus간의 에너지 전달이 약하고 Q factor만 높아지는 결과를 보았습니다. 이를 개선하기 위해 Ring의 모양을 조절해 Coupling 구간을 늘려서 만든게 RaceTrack Ring Resonator입니다.
-Layout를 보면 다음과 같습니다.
+이전 완전한 원형 Ring Resonator의 문제점은 Coupling 구간이 짧아 Ring과 bus간의 에너지 전달이 약하고 Q factor만 높아지는 결과를 보았습니다. 이를 개선하기 위해 Ring의 모양을 조절해 Coupling 구간을 늘려서 만든게 RaceTrack Ring Resonator입니다.  
+Layout를 보면 다음과 같습니다.  
+  
+![Racetrack_Layout](./racetrack_layout.png)  
+  
+Layout에서 Ring의 모양을 보면 Racetrack처럼 생긴걸 알 수 있습니다. 현재 이 Ring의 스펙은 Radius = 5.0, lenght_X = 3.0 입니다. 즉 Ring의 X축 길이를 늘려 Coupling 구간을 3μm로 늘린 것 입니다.  
+이제 이론적으로 FSR을 구해보겠습니다. 마찬가지로 이번 실험도 파장 ($\lambda$): $1.55\mu\text{m}$ ($1550\text{nm}$) 입니다. 구하는 과정은 다음과 같습니다.  
+  
+$$\text{L} = 2 \cdot length_X + 2\pi R = 2(3) \cdot 2 \pi (5) \approx 37.42\mu\text{m}$$  
+  
+$$\text{FSR} = \frac{(1.55\\mu\text{m})^2}{4.2 \times (37.42\mu\text{m})} \approx 15.3nm$$
+
+# **5.RaceTrack Ring Resonator 분석**
+이전 파트를 통해 Racetrack Ring Resonator를 알게 되었고 FSR값도 구했습니다. 이번 파트에서는 시뮬레이션을 통해 Transmission Spectrum을 추출하여 이를 분석해보겠습니다.  
+![Racetrack Spectrum](./Racetrack_Ring_Resonator_transmission_spectrum_result.png)
+
+
+
+
+
+
 
 
