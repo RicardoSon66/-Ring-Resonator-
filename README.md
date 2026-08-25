@@ -112,9 +112,9 @@ Harminv에서 각 파장의 dip 간격을 보면 1538.5 \~1555.1 = 16.6nm 이고
 # **6.결론**
 - **원형 Ring Resonator**: through port 만으로는 공진 여부를 판단하기 어려웠으나, coupled mode theory 및 Harminv를 Ring 내부 직접 관측으로 공진이 실제로 존재함은 확인 하였습니다(Q=3112.8). 다만 짧은 Coupling 구간으로 결합이 매우 약해(undercoupled) extinction ratio가 낮았습니다.  
   
-- **Racetrack Ring Resonator**: coupling length를 3μm로 늘린 결과, extinction ratio가 최대 -5.7dB까지 개선이 되었고, 예측한 FSR 값 15.3nm과 실측정 결과 16.6~17.1nm이 오차 8~12% 범위에서 일치함을 확인하였습니다. 이를 통해 coupling length가 결합 세기를 직접적으로 결정하는 파라미터임을 정량적으로 검증하였습니다.  
+- **Racetrack Ring Resonator**: coupling length를 3μm로 늘린 결과, extinction ratio가 최대 -5.7dB까지 개선이 되었고, 예측한 FSR 값 15.3nm과 실측정 결과 16.6~17.1nm이 오차 8/~12% 범위에서 일치함을 확인하였습니다. 이를 통해 coupling length가 결합 세기를 직접적으로 결정하는 파라미터임을 정량적으로 검증하였습니다.  
   
-- **한계점 및 아쉬운점**: 2D effective index 근사를 사용하여 정확한 $\frac{text{n_erf}text{n_g}} 대신 근사치 사용에 따른 오차, 그리고 여전히 undercoupled 상태로 critical coupling에는 도달하지 못한 점이 아쉽습니다.  
+- **한계점 및 아쉬운점**: 2D effective index 근사를 사용하여 정확한 $\frac{n_{eff}}{n_g}$ 대신 근사치 사용에 따른 오차, 그리고 여전히 undercoupled 상태로 critical coupling에는 도달하지 못한 점이 아쉽습니다.  
 또한 연산 환경이 현재 MPI 기반 병렬 처리 없이 단일 코어로 진행되어, 특히 Racetrack Ring Resonator처럼 높은 Q factor를 가진 구조는 decay_by의 수렴 구조를 만족하기까지 많은 시간이 소모되었습니다.(실제로 Racetrack의 시뮬레이션 시간은 4시간 30분 가량 소요함)  
 중간에 MPI 병렬구조를 시도하였으나 기존 의존성과 바이너리 호환성 문제로 실패하였고, 현재 시간 제약상 단일 코어 환경으로 진행 할 수 밖에 없었습니다.  
 향후 MPI 병렬화를 재구성을 시도를 하여 시간을 크게 단축하여 더 정밀한(resolution 의 증가 등) 검증이 가능할 것으로 기대가 됩니다.  
