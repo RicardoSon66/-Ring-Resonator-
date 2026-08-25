@@ -46,6 +46,7 @@ $$\text{Ratio} = \frac{P_{\text{ring}}}{P_{\text{ref}}}$$
 - **dB 범위: -0.10181895006862107 ~ -0.019041293025793507**  
   
 수치로 보니 확실한 문제가 있습니다. 이때 설정한 Transmission Spectrum의 눈금은 (-15, 1)이였습니다 즉 눈금이 결과에 비해 굉장히 크기 때문에 flat해 보인 겁니다. 이를 (-0.15, 0.02)로 수정 후 측정한 그래프는 다음과 같습니다.  
+  
 ![Ring_Resonator_Resolution20](./Resolution20.png)  
   
 Resolution이 20일때 Transmission Spectrum 입니다. 이를 관찰 하였을 때 ring resonance가 보인다고 해석하기는 힘듭니다 예측한 값과 비교하면 안맞는 부분이 있습니다.  
