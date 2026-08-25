@@ -23,9 +23,9 @@ $$\text{FSR} = \frac{\lambda^2}{n_g \cdot L} = \frac{\lambda^2}{n_g \cdot (2\pi 
   
 여기서 매개변수들의 조건은 다음과 같습니다.  
   
-**파장 ($\lambda$):** $1.55\mu\text{m}$ ($1550\text{nm}$)  
-**반지름 ($R$):** $5.0\mu\text{m}$ $\rightarrow$ 둘레 $L = 2\pi R \approx 31.42\mu\text{m}$  
-**실리콘 도파로 그룹 인덱스 ($n_g$):** $\approx 4.2$ (Substrate $\text{SiO}_2$, Core $\text{Si}$ 기준)  
+- **파장 ($\lambda$):** $1.55\mu\text{m}$ ($1550\text{nm}$)  
+- **반지름 ($R$):** $5.0\mu\text{m}$ $\rightarrow$ 둘레 $L = 2\pi R \approx 31.42\mu\text{m}$  
+- **실리콘 도파로 그룹 인덱스 ($n_g$):** $\approx 4.2$ (Substrate $\text{SiO}_2$, Core $\text{Si}$ 기준)  
 위 수치를 공식에 대입하면 다음과 같이 이론적 FSR을 예측할 수 있습니다.  
   
 $$\text{FSR} = \frac{(1.55\\mu\text{m})^2}{4.2 \times (2\pi \times 5.0\mu\text{m})} \approx 0.0182\mu\text{m} = \mathbf{18.2\text{nm}}$$  
@@ -42,8 +42,8 @@ $$\text{Ratio} = \frac{P_{\text{ring}}}{P_{\text{ref}}}$$
   
 이 식을 사용하여 ratio의 범위와 dB의 범위를 한번 수치로 확인해보면 다음과 같습니다.  
   
-**ratio 범위: 0.9768280116306808 ~ 0.9956251777893413**  
-**dB 범위: -0.10181895006862107 ~ -0.019041293025793507**  
+- **ratio 범위: 0.9768280116306808 ~ 0.9956251777893413**  
+- **dB 범위: -0.10181895006862107 ~ -0.019041293025793507**  
   
 수치로 보니 확실한 문제가 있습니다. 이때 설정한 Transmission Spectrum의 눈금은 (-15, 1)이였습니다 즉 눈금이 결과에 비해 굉장히 크기 때문에 flat해 보인 겁니다. 이를 (-0.15, 0.02)로 수정 후 측정한 그래프는 다음과 같습니다.  
 ![Ring_Resonator_Resolution20](./Resolution20.png)  
@@ -66,8 +66,9 @@ $$T = \frac{a^2 - 2ra\cos\theta + r^2}{1 - 2ra\cos\theta + (ra)^2}$$
 즉 이는 "완전한 원형 Ring Resonator는 공진할 수 가 없다."가 아니라 gap = 0.2μm, radius = 5.0μm의 조건에는 결합의 길이가 짧아서 그 결과 through에서 관측되는 extinction ratio가 매우 얕다가 맞는 결론입니다. bus에서 봤을 때 "티가 안 난다"라는 상태인 거죠
 이때까지는 계속 bus를 통한 간접적인 관측으로만 보았는데 공진이 실제로 존재하는지 직접 보기 위해 Harminv를 이용해 링 내부를 직접 관찰을 해보고 수치로 확인하였습니다.  
   
-**--- Harminv 결과 ---**
+**--- Harminv 결과 ---**  
 **freq=0.6408500985034019, Q=3112.8128854260626, wavelength=1560.43nm**  
+  
 보면 Q = 3112.8이라는 값이 나왔습니다. 이는 "through에서 보는 extinction ratio 가 굉장히 얕다"라는 결과와 정확히 이어집니다.  
 즉 결합이 약함 -> Ring으로 전달되는 에너지가 적음 -> 반대로 Ring으로 전달된 에너지가 bus로 전달이 힘들다 -> 링 안에 에너지가 오랫동안 머무름 -> 에너지가 장기적으로 잔류 ->Q factor가 높아짐  
 공진 파장이 1560.43nm 인데 원래 목표는 1550nm로 오차가 약 10nm(0.6%)정도 수준인데 이거는 시뮬레이션 환경이 3d가 아닌 2d이므로 합리적인 범위입니다.
@@ -91,13 +92,13 @@ $$\text{FSR} = \frac{(1.55\\mu\text{m})^2}{4.2 \times (37.42\mu\text{m})} \appro
   
 ![Racetrack Spectrum](./Racetrack_Ring_Resonator_transmission_spectrum_result.png)  
   
-**--- Harminv 결과 (링 내부 공진 모드) ---**
-freq=0.6360424346854524, Q=6507.531341176368, wavelength=1572.22nm
-freq=0.6360968718518586, Q=2949.833740557841, wavelength=1572.09nm
-freq=0.6430307620127971, Q=14885.29645475724, wavelength=1555.14nm
-freq=0.6430436658356912, Q=5652.192236345133, wavelength=1555.10nm
-freq=0.6499840271911567, Q=10004.690094244379, wavelength=1538.50nm
-freq=0.6500139889993141, Q=12078.121012229258, wavelength=1538.43nm  
+**--- Harminv 결과 ---  
+freq=0.6360424346854524, Q=6507.531341176368, wavelength=1572.22nm  
+freq=0.6360968718518586, Q=2949.833740557841, wavelength=1572.09nm  
+freq=0.6430307620127971, Q=14885.29645475724, wavelength=1555.14nm  
+freq=0.6430436658356912, Q=5652.192236345133, wavelength=1555.10nm  
+freq=0.6499840271911567, Q=10004.690094244379, wavelength=1538.50nm  
+freq=0.6500139889993141, Q=12078.121012229258, wavelength=1538.43nm**  
   
 스펙트럼을 확인하니 정말 좋은 결과를 얻을 수 있습니다. 1538nm 근처에 약 -5.7dB 1554nm 근처에 약 -2.3dB 1572nm 근처에 약 -1.7dB라는 dip를 얻었으며 이는 원형 Ring Resonator보다 훨씬 뛰어난 결과입니다.  
 이게 바로 coupling length를 늘리면 coupling이 강해진다 라는 결론에 도달하는 직접적인 결과를 얻을 수 있었습니다.  
@@ -105,13 +106,17 @@ dip의 간격을 보면 1538 -> 1554(16nm), 1554 -> 1572(18nm)이고 이는 이�
 Harminv결과를 보면 파장이 1538, 1555, 1572가 나왔습니다. 이는 S21의 dip 간격과 거의 정확하게 일치하는 값을 얻었으며 현재 이 Racetrack에서는 공진 모드가 세가지가 있다는걸 확인 할 수 있습니다.  
 한가지 짚을 점이 있다면 dip의 간격마다 모드가 쌍으로 존재하는데 이는 물리적으로 2개의 모드가 존재하는 것이 아니며 Harminv의 알고리즘 수치적 특성입니다. 그렇기 때문에 각 파장당 하나의 물리적 모드로 해석하면 됩니다.  
 ripple에 대해 얘기를 해보자면 이건 넓은 파장의 범위(1520nm ~ 1580nm)를 좁은 대역폭을 가진 source로 커버를 하다보니 파장의 끝쪽으로 갈수록 source power가 약해져서 생기는 노이즈 입니다.  
-Harminv에서 각 파장의 dip 간격을 보면 1538.5~1555.1 = 16.6nm 이고 1555.1 ~ 1572.2 = 17.1nm이고 예측 FSR값 15.3nm와 오차가 8~12% 이므로 잘 맞는 결과입니다.  
+Harminv에서 각 파장의 dip 간격을 보면 1538.5 \~1555.1 = 16.6nm 이고 1555.1 ~ 1572.2 = 17.1nm이고 예측 FSR값 15.3nm와 오차가 8\~12% 이므로 잘 맞는 결과입니다.  
 하지만 여전히 Q값이 2900~14900으로 상당히 높습니다. 이는 해당 스펙의 Racetrack이 강한 결합 상태는 아니라는 것을 알 수 있습니다. 이를 해결하기 위해서는 Coupling 구간을 더 늘리거나 gap줄이다 보면 강한 결합 상태 즉 dip이 -20dB ~ -30dB에 더욱 가까워 질 것입니다.
 
 # **6.결론**
-**원형 Ring Resonator**: through port 만으로는 공진 여부를 판단하기 어려웠으나, coupled mode theory 및 Harminv를 Ring 내부 직접 관측으로 공진이 실제로 존재함은 확인 하였습니다(Q=3112.8). 다만 짧은 Coupling 구간으로 결합이 매우 약해(undercoupled) extinction ratio가 낮았습니다.
-**Racetrack Ring Resonator**: coupling length를 3μm로 늘린 결과, extinction ratio가 최대 -5.7dB까지 개선이 되었고, 예측한 FSR 값 15.3nm과 실측정 결과 16.6~17.1nm이 오차 8~12% 범위에서 일치함을 확인하였습니다. 이를 통해 coupling length가 결합 세기를 직접적으로 결정하는 파라미터임을 정량적으로 검증하였습니다.
-**한계점 및 아쉬운점**: 2D effective index 근사를 사용하여 정확한 $\frac{text{n_erf}text{n_g}} 대신 근사치 사용에 따른 오차, 그리고 여전히 undercoupled 상태로 critical coupling에는 도달하지 못한 점이 아쉽습니다.  
-또한 연산 환경이 현재 MPI 기반 병렬 처리 없이 단일 코어로 진행되어, 특히 Racetrack Ring Resonator처럼 높은 Q factor를 가진 구조는 decay_by의 수렴 구조를 만족하기까지 많은 시간이 소모되었습니다.(실제로 Racetrack의 시뮬레이션 시간은 4시간 30분 가량 소요함) 중간에 MPI 병렬구조를 시도하였으나
-기존 의존성과 바이너리 호환성 문제로 실패하였고, 현재 시간 제약상 단일 코어 환경으로 진행 할 수 밖에 없었습니다. 향후 MPI 병렬화를 재구성을 시도를 하여 시간을 크게 단축하여 더 정밀한(resolution 의 증가 등) 검증이 가능할 것으로 기대가 됩니다.
-**향후 방향**: MPI 병렬화를 재구성하여 undercoupled 상태에서 벗어나기 위해 gap을 줄이거나 coupling length를 더 늘려 critical coupling(-20dB ~ -30dB)에 도달하게 하겠습니다.
+- **원형 Ring Resonator**: through port 만으로는 공진 여부를 판단하기 어려웠으나, coupled mode theory 및 Harminv를 Ring 내부 직접 관측으로 공진이 실제로 존재함은 확인 하였습니다(Q=3112.8). 다만 짧은 Coupling 구간으로 결합이 매우 약해(undercoupled) extinction ratio가 낮았습니다.  
+  
+- **Racetrack Ring Resonator**: coupling length를 3μm로 늘린 결과, extinction ratio가 최대 -5.7dB까지 개선이 되었고, 예측한 FSR 값 15.3nm과 실측정 결과 16.6~17.1nm이 오차 8~12% 범위에서 일치함을 확인하였습니다. 이를 통해 coupling length가 결합 세기를 직접적으로 결정하는 파라미터임을 정량적으로 검증하였습니다.  
+  
+- **한계점 및 아쉬운점**: 2D effective index 근사를 사용하여 정확한 $\frac{text{n_erf}text{n_g}} 대신 근사치 사용에 따른 오차, 그리고 여전히 undercoupled 상태로 critical coupling에는 도달하지 못한 점이 아쉽습니다.  
+또한 연산 환경이 현재 MPI 기반 병렬 처리 없이 단일 코어로 진행되어, 특히 Racetrack Ring Resonator처럼 높은 Q factor를 가진 구조는 decay_by의 수렴 구조를 만족하기까지 많은 시간이 소모되었습니다.(실제로 Racetrack의 시뮬레이션 시간은 4시간 30분 가량 소요함)  
+중간에 MPI 병렬구조를 시도하였으나 기존 의존성과 바이너리 호환성 문제로 실패하였고, 현재 시간 제약상 단일 코어 환경으로 진행 할 수 밖에 없었습니다.  
+향후 MPI 병렬화를 재구성을 시도를 하여 시간을 크게 단축하여 더 정밀한(resolution 의 증가 등) 검증이 가능할 것으로 기대가 됩니다.  
+  
+- **향후 방향**: MPI 병렬화를 재구성하여 undercoupled 상태에서 벗어나기 위해 gap을 줄이거나 coupling length를 더 늘려 critical coupling(-20dB ~ -30dB)에 도달하게 하겠습니다.  
