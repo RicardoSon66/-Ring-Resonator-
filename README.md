@@ -121,3 +121,5 @@ Harminv에서 각 파장의 dip 간격을 보면 1538.5 \~1555.1 = 16.6nm 이고
 향후 MPI 병렬화를 재구성을 시도를 하여 시간을 크게 단축하여 더 정밀한(resolution 의 증가 등) 검증이 가능할 것으로 기대가 됩니다.  
   
 - **향후 방향**: MPI 병렬화를 재구성하여 undercoupled 상태에서 벗어나기 위해 gap을 줄이거나 coupling length를 더 늘려 critical coupling(-20dB ~ -30dB)에 도달하게 하겠습니다.  
+  
+7.Meep의 2D 근사 FDTD와 Tidy3D의 3D FDTD를 이용하여 두 Spectrum의 차이가 굉장히 심하기 때문에 추후에 정리하여 디버깅예정
